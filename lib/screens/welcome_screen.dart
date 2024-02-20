@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:plant_care_app/screens/LoginScreen.dart';
+import 'package:plant_care_app/screens/SettingsScreen.dart';
+import 'package:plant_care_app/screens/SignUpScreen.dart';
 import 'package:plant_care_app/utils/localization.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -14,21 +17,30 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                // Navigate to login screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
               },
               child: Text(AppLocalizations.of(context)!.translate('login')!),
             ),
             SizedBox(height: 20),
             OutlinedButton(
               onPressed: () {
-                // Navigate to sign up screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpScreen()),
+                );
               },
               child: Text(AppLocalizations.of(context)!.translate('sign_up')!),
             ),
             SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                // Navigate to settings screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsScreen()),
+                );
               },
               child: Text(AppLocalizations.of(context)!.translate('language')!),
             ),
